@@ -6,17 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.fragment.app.viewModels
 import com.example.blog2.databinding.FragmentWriteBlogBinding
+import com.example.blog2.viewmodel.BlogViewModel
 
 
 class WriteBlogFragment : Fragment() {
+
+    // Initialization
+    val blogViewModel: BlogViewModel by viewModels()
     private var _binding: FragmentWriteBlogBinding? = null
     private val binding get() = _binding!!
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
     }
 
     override fun onCreateView(
@@ -30,21 +35,20 @@ class WriteBlogFragment : Fragment() {
         val tvWriteBlogPost = binding.tvBlogPost //EditText
         val btnSubmitBlog = binding.btnSubmitBlog // Button
 
+
         btnSubmitBlog.setOnClickListener(){
             val title = tvWriteTitle.text.toString()
-            val blogPost = tvWriteBlogPost.text.toString()
-            val blogList = AddBlogPost()
+            val blog = tvWriteBlogPost.text.toString()
 
-            if (title.isNotEmpty()&& blogPost.isNotEmpty()){
-                blogList.addBlog(title,blogPost)
+
+            if (title.isNotEmpty() && blog.isNotEmpty()){
+                blogViewModel.addBlog(title, blog)
             }
             else{
                 Toast.makeText(context,"Please fill in all fields", Toast.LENGTH_LONG).show()
-
             }
 
         }
-
         btnCloseFragment.setOnClickListener(){
             parentFragmentManager.beginTransaction().remove(this).commit()
         }

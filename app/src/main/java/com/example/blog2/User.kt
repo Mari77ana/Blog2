@@ -3,15 +3,16 @@ package com.example.blog2
 import android.provider.ContactsContract.CommonDataKinds.Email
 import androidx.lifecycle.ViewModel
 
-class User(var name : String, var email: String) {
+data class User(var userName : String, var userEmail: String) {
     override fun toString(): String {
-        return "User(name='$name', email='$email')"
+        return "User(name='$userName', email='$userEmail')"
     }
 }
 
 
 /*
 class AddUserViewModel(): ViewModel() {
+
 
     val userList = ArrayList<User>()  // ArrayList of type object User
 

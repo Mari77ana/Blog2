@@ -29,7 +29,6 @@ class BlogPageFragment : Fragment() {
 
         btnCreateFragment.setOnClickListener(){
             createFragment(fcvSpawnFragment)
-
         }
 
         return view
@@ -40,7 +39,6 @@ class BlogPageFragment : Fragment() {
                 setReorderingAllowed(true)
                 add(fcvSpawnFragment.id,WriteBlogFragment())
             }
-
         }
         else{
             println("exists")

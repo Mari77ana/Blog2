@@ -12,16 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="610dp">
 
+
         <EditText
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="112dp"
             android:autofillHints=""
             android:ems="10"
+            android:hint="@string/textTitle"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/textTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,12 +32,13 @@
             android:id="@+id/tv_blogPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="16dp"
             android:autofillHints="blog post"
             android:ems="10"
+            android:hint="@string/text_blog_post"
             android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@string/text_blog_post"
             app:layout_constraintBottom_toTopOf="@+id/btn_submitBlog"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -48,22 +50,22 @@
             android:id="@+id/btn_submitBlog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
-            android:text="@string/submit"
+            android:layout_marginBottom="12dp"
+            android:text="@string/save"
             app:layout_constraintBottom_toTopOf="@+id/btn_closeFragment"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/btn_closeFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="116dp"
+            android:layout_marginBottom="264dp"
             android:text="@string/close"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
